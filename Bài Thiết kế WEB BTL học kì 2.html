@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="data:image/png;base64,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">
+    <title>Hưng Hoa Quả</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            
+        }
+
+        header {
+            
+          
+            color: white;
+            text-align: center;
+            padding: 250px;
+            width: auto;
+            background-image: url(.vscode/z5256597001390_c0394d1e15cc7134ec1efa513aacab82.jpg);
+            background-size: 60%  ;
+            background-image: value;
+            background-origin:padding-box;
+            
+         
+
+            
+
+            
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .qua {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .qua:hover {
+            transform: scale(1.05);
+        }
+
+        .qua img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .qua h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .qua p {
+            color: #d40808;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .qua button {
+            background-color: #170f75;
+            color: rgb(213, 206, 210);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s ease; 
+        }
+
+        .qua button:hover {
+            background-color: #c41c36;
+        }
+        
+        ul {
+  position: absolute;
+  
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+ul li {
+  list-style: none;
+  padding-top: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+ul li a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  margin: 30px 1;
+  padding: 20px 25px;
+  text-decoration: none;
+  color: #9d6c2dd1;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.5s;
+  z-index: 1;
+  left: 10;
+  right: 50;
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #802ab3;
+  border-bottom: 2px solid #9a1acc;
+  border-right: 2px solid #9a1acc; 
+  border-left: 2px solid #9a1acc;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+ul li a:after {
+  content: "";
+  
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a87c30;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+ul li a:hover {
+  color: #fff;
+}
+ul li a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+ul li a:hover:after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.menu3{
+width: 190px;
+background-color: aquamarine;
+color:azure;
+min-height: 80px;
+display: none;
+position: absolute;
+}
+.menu3 li{
+  list-style: none;  
+}
+.menu3 li a{
+    
+    text-transform: none;
+    text-decoration: none;
+    color: rgb(207, 201, 39);
+    display: block;
+    border: 2px #D3D3D3 solid;
+    line-height: 50px;
+    text-align: 15px;
+}
+.menu3 li:hover {
+ 
+    display: block;
+    background-color: rgb(33, 2, 2);
+    color: rgb(41, 118, 186);
+    transition: ease-in-out 0.35s;
+    
+}
+.menu3 li a:hover{
+    background-color: rgb(105, 146, 159);
+    color: #9c8049;
+   transform: ease-in-out 0.35s;
+}
+
+
+.data-container {
+  
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img{
+        width: 100%;
+        height: auto;
+    }
+   
+    .anh2{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        grid-gap: 1em;
+    }
+    .anh3{
+        position: relative;
+    }
+    .localtion-img{
+        line-height: 40px;
+        overflow: hidden;
+    }
+    .localtion-img img{
+        filter: blur(1px);
+        transition: filter 0.35s ease-in-out;
+        transform: scale(1.1);
+    }
+    .anh4{
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .5s;
+        background-color: rgba(red, rgb(7, 235, 7), blue, alpha);
+        color: rgb(164, 82, 82);
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .anh3 a{
+        padding-top: 100px;
+    }
+    .anh3:hover .anh4{
+        opacity: 1;
+    }
+    .anh3:hover .localtion-img{
+        filter: blur(3px);
+    }
+    .img{
+        font-size: 50px;
+    }
+    body{
+    background: url('../images/bg.jpeg');
+    background-size: cover;
+    background-position-y: -80px;
+    font-size: 16px;
+}
+
+body{
+    background: url('../images/bg.jpeg');
+    background-size: cover;
+    background-position-y: -80px;
+    font-size: 16px;
+}
+
+#wrapper{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn1 {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 30px;
+  background: rgb(233, 230, 62);
+  font-size: 20px;
+  border-top-right-radius: 2;
+  border-bottom-left-radius: ;
+  transition: all 1s;
+  margin-left: 80rem;
+  margin-top: 50rem;
+}
+
+.btn:after, .btn:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid #e40808;
+  transition: all 1s;
+}
+.btn:after {
+  top: -1px;
+  left: -1px;
+  border-top: 6px solid rgb(234, 230, 230);
+  border-left: 6px solid rgb(234, 230, 230);
+}
+.btn:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 6px solid rgb(226, 221, 221);
+  border-right: 6px solid rgb(254, 250, 250);
+}
+.btn:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.btn:hover:before, .btn:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes my {
+0% { color: #F8CD0A; }
+50% { color: #fff; }
+100% { color: #F8CD0A; }
+}
+@-moz-keyframes my {
+0% { color: #F8CD0A; }
+50% { color: #fff; }
+100% { color: #F8CD0A; }
+}
+@-o-keyframes my {
+0% { color: #d52d0f; }
+50% { color: #fff; }
+100% { color: #e7470d; }
+}
+@keyframes my {
+0% { color: #F8CD0A; }
+50% { color: #fff; }
+100% { color: #f8550a; }
+}
+.text-animation {
+    
+background:#3d3d3d;
+font-size:28px;
+font-weight:bold;
+-webkit-animation: my 700ms infinite;
+-moz-animation: my 700ms infinite;
+-o-animation: my 700ms infinite;
+animation: my 700ms infinite;
+}
+input{
+    
+    margin-top: 6rem;
+    padding-right: 6rem;
+    margin-left: 600px;
+    margin-bottom: 1px;
+    height: 2rem;
+}
+    </style>
+</head>
+<body>
+   
+    <header>
+    </header>
+    <marquee behavior="Scroll" direction="auto-fill" scrollamount="20" border="2px">
+        <font size="77px" color="#FF0000" ><i>MUA SẮM THẢ GA KHUYẾN MÃI LÊN ĐẾN 60%!!!</i></font>
+    </marquee>
+    
+    <p class="text-animation" align="center">CHÚC QUÝ KHÁCH MUA SẮM VUI VẺ// Hotline: 08888888// Facebook: Hưng Còii</p>
+    <br><br>
+   
+    <div class="menu">
+        <div class="menu1">
+            
+            <ul class="menu2">
+                <li><a href="http://127.0.0.1:3000/.vscode/trangchu.html" class="href">Trang chủ</a></li>
+                <li><a href="http://127.0.0.1:3000/.vscode/Gioithieu.html" class="href">Giới thiệu</a>
+                <li><a href="http://127.0.0.1:3000/.vscode/sanpham.html" class="href">Sản phẩm</a></li>
+                <li><a href="#" class="href">Khuyến mãi </a></li>
+                <li><a href="#" class="href">Giỏ hàng </a></li>
+                <li><a href="https://www.facebook.com/ghfhghghghghghghg" class="href">Liên hệ</a></li>
+            </ul>
+        </div>
+        <input type="search" name="search" id="search" placeholder="Bạn cần tìm gì?">
+        <select >
+            <label></label>
+        </select>
+          
+        
+        <div id="warpper">
+            <a href="http://127.0.0.1:3000/Form.html" class="btn1">
+            <span1>Đăng Nhập</span1>   
+            </a>
+        </div>  
+    <br><br>
+    <section>
+        <div class="qua">
+            <img src="https://file.hstatic.net/1000304337/file/thanh-pham-7639-min_6ec9db1eb2d24695870c1bc8f50ad0f3_1024x1024.png" alt="Apple">
+            <h2><a style="text-decoration: none;" href="https://hongtreodalat.com/san-pham/hong-treo-gio-da-lat-1-hop-500gr/" target="_blank">Hồng Treo Gió</a></h2>
+            <p><del>150.000đ</del></p>
+            <p>100.000đ /1kg</p>
+            <button>MUA</button>
+        </div>
+
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2023/04/z4241791201799_0842ab1b2bc3b097eb0f2ffb14ee36a3.jpg" >
+            <h2><a style="text-decoration: none;" href="https://traicayngon.com.vn/san-pham/quyt-uc-2ph-ngot-lim/" target="_blank">Cam</a></h2>
+            <p><del>155.000đ</del></p>
+            <p>120.00đ / 1kg</p>
+              <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://dautaydalat.vn/wp-content/uploads/2020/02/dau-tay-nhat-da-lat-1-600x600.jpg" >
+            <h2><a style="text-decoration: none;" href="https://dautaydalat.vn/san-pham/dau-tay-nhat-ban/"target="_blank">Dâu Tây Đà Lạt</a></h2>
+            <p><del>249.000đ</del></p>
+            <p>200.000đ / 1kg</p>
+            <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2022/07/c7e0b3d82cd5ef8bb6c45-340x340.jpg" >
+            <h2><a style="text-decoration: none;" href="https://vuadualuoi.net/dua-luoi-ha-uyen/"target="_blank">Dưa lưới Đài Loan </a></h2>
+            <p><del>200.000đ</del></p>
+            <p>150.000đ / 1kg</p>
+            <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2022/07/Lazzara-grapes-blog-post-march-1-340x340.jpg" >
+            <h2><a style="text-decoration: none;" href="https://traicayngon.com.vn/san-pham/nho-do-khong-hat-uc-crimson/"target="_blank">Nho Đỏ Không Hạt Úc</a></h2>
+            <p><del>280.000đ</del></p>
+            <p>220.00đ / 1kg</p>
+            <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2017/01/15726362_1229310277159715_8946748205281385625_n-340x340.jpg" >
+            <h2><a style="text-decoration: none;" href="https://traicayngon.com.vn/san-pham/tao-envy-new-zealand-size-nho/"target="_blank">Táo Envy New Zealand </a></h2>
+            <p><del>288.000đ</del></p>
+            <p>202.000đ / 1kg</p>
+            <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://annamshop.com/wp-content/uploads/2019/08/buoi-da-xanh-loai-1-768x768.jpg" >
+            <h2><a style="text-decoration: none;" href="https://annamshop.com/buoi-da-xanh/"target="_blank">Bưởi Da Xanh</a></h2>
+            <p><del>180.000đ</del></p>
+            <p>120.000đ / 1kg</p>
+            <button>MUA</button>
+        </div> 
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2017/01/16114190_10153987037751222_5319345083283936321_n-340x340.jpg" >
+            <h2><a style="text-decoration: none;" href="https://traicayngon.com.vn/san-pham/nho-kho-nguyen-canh-uc-crimson-seedless/" target="_blank">Nho Khô</a> </h2>
+            <p><del>499.000đ</del></p>  <s>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </s>
+            <p>399.000đ / 1kg</p>
+            <button>MUA</button>
+        </div>       
+        <div class="qua">
+            <img src="https://i.pinimg.com/564x/d3/bb/e4/d3bbe4f77d8b0ce77b13abcdee0a1c91.jpg" >
+            <h2><a style="text-decoration: none;" href="https://nongsandungha.com/thuc-pham/coc-bao-tu" target="_blank">Cóc </a> </h2>
+            <p><del>120.000đ</del></p>  <s>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </s>
+            <p>99.00đ / 1kg</p>
+            <button>MUA</button>
+        </div>       
+    </section>
+    <table >
+    <tr><p>
+    <li align="left">Facebook: <a href="https://www.facebook.com/ghfhghghghghghghg" target="_blank">https://www.facebook.com/ghfhghghghghghghg</a></li>
+    <li align="left">Mail: ttc.tucgu@gmail.com</li>
+    <li align="left">Hotline: 08888888</li>
+    <li align="left">Địa chỉ: Số 24 LK53 khu đô thị phú lương - Quận Hà Đông - Hà Nội</li>
+</p></tr>
+</table>
+</body>
+</html>
+ 

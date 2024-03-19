@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #329736;
+            color: white;
+            text-align: center;
+            padding: 250px;
+            background-image: url(https://vnn-imgs-f.vgcloud.vn/2020/09/24/18/tranh-cai-an-hoa-qua-truoc-hay-sau-bua-an-da-co-cau-tra-loi.jpg);
+            background-size: 100%;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .qua {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .qua:hover {
+            transform: scale(1.05);
+        }
+
+        .qua img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .qua h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .qua p {
+            color: #d40808;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .qua button {
+            background-color: #170f75;
+            color: rgb(213, 206, 210);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s ease; 
+        }
+
+        .qua button:hover {
+            background-color: #c41c36;
+        }
+        
+        ul {
+  position: absolute;
+  
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+ul li {
+  list-style: none;
+  padding-top: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+ul li a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  margin: 30px 1;
+  padding: 20px 25px;
+  text-decoration: none;
+  color: #ea8d13d1;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.5s;
+  z-index: 1;
+  left: 10;
+  right: 50;
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #802ab3;
+  border-bottom: 2px solid #9a1acc;
+  border-right: 2px solid #9a1acc; 
+  border-left: 2px solid #9a1acc;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+ul li a:after {
+  content: "";
+  
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a7751e;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+ul li a:hover {
+  color: #fff;
+}
+ul li a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+ul li a:hover:after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.menu3{
+width: 190px;
+background-color: aquamarine;
+color:azure;
+min-height: 80px;
+display: none;
+position: absolute;
+}
+.menu3 li{
+  list-style: none;  
+}
+.menu3 li a{
+    
+    text-transform: none;
+    text-decoration: none;
+    color: rgb(208, 202, 37);
+    display: block;
+    border: 2px #D3D3D3 solid;
+    line-height: 50px;
+    text-align: 15px;
+}
+.menu3 li:hover {
+ 
+    display: block;
+    background-color: rgb(33, 2, 2);
+    color: rgb(15, 105, 183);
+    transition: ease-in-out 0.35s;
+    
+}
+.menu3 li a:hover{
+    background-color: rgb(105, 146, 159);
+    color: #FFCC66;
+   transform: ease-in-out 0.35s;
+}
+
+
+.data-container {
+  
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img{
+        width: 100%;
+        height: auto;
+    }
+   
+    .anh2{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        grid-gap: 1em;
+    }
+    .anh3{
+        position: relative;
+    }
+    .localtion-img{
+        line-height: 40px;
+        overflow: hidden;
+    }
+    .localtion-img img{
+        filter: blur(1px);
+        transition: filter 0.35s ease-in-out;
+        transform: scale(1.1);
+    }
+    .anh4{
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .5s;
+        background-color: rgba(red, rgb(7, 235, 7), blue, alpha);
+        color: white;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .anh3 a{
+        padding-top: 100px;
+    }
+    .anh3:hover .anh4{
+        opacity: 1;
+    }
+    .anh3:hover .localtion-img{
+        filter: blur(3px);
+    }
+    .img{
+        font-size: 50px;
+    }
+    body{
+    background: url('../images/bg.jpeg');
+    background-size: cover;
+    background-position-y: -80px;
+    font-size: 16px;}
+</style>
+</head>
+<body>
+    <br><br>
+    <div class="menu">
+        <div class="menu1">
+            <ul class="menu2">
+                <li><a href="http://127.0.0.1:3000/.vscode/sanpham.html" class="href">Trang chủ</a></li>
+                <li><a href="#" class="href">Giới thiệu</a>
+                <li><a href="#" class="href">Sản phẩm</a></li>
+                <li><a href="#" class="href">Khuyến mãi </a></li>
+                <li><a href="#" class="href">Giỏ hàng </a></li>
+                <li><a href="#" class="href">Liên hệ</a></li>
+            </ul>
+        </div>
+   
+    <br><br><br><br>
+    <div class="anh">
+        <div class="anh2">
+         <article class="anh3" id="123">
+            <a href="" class="anh4"> Xoài</a>
+            <div class="localtion-img"><img src="https://i.pinimg.com/736x/8b/b0/56/8bb056afa8d12d44d410954ffde07bef.jpg" alt="San-Fransisco" width="80px" width="300px" height="80px"></div>
+         </article>
+         <article class="anh3" id="1234">
+            <a href="" class="anh4"> Sầu Riêng Thái</a>
+            <div class="localtion-img"><img src="https://i.pinimg.com/564x/60/c2/de/60c2deadc73da1e500ef94dc50b49db5.jpg" alt="London" width="80px" width="300px" height="80px"></div>
+         </article>
+         <article class="anh3" id="12345">
+            <a href="" class="anh4"> Cherry</a>
+            <div class="localtion-img"><img src="https://traicayngon.com.vn/wp-content/uploads/2016/11/1546360_560468410712113_1521017477_n-300x300.jpg" alt="new-york" width="300px" height="170px"></div>
+         </article>
+         <article class="anh3" id="123456">
+            <a href="" class="anh4"> Chuối</a>
+            <div class="localtion-img"><img src="https://i.pinimg.com/564x/af/a4/4f/afa44f9a055d6eb6e0727236ede9dafd.jpg    " alt="Cape-town" width="300px" height="170px"></div>
+         </article>           
+        </div>
+    </div>
+    <section>
+        <div class="qua">
+            <img src="https://file.hstatic.net/1000304337/file/thanh-pham-7639-min_6ec9db1eb2d24695870c1bc8f50ad0f3_1024x1024.png" alt="Apple">
+            <h2><a style="text-decoration: none;" href="https://hongtreodalat.com/san-pham/hong-treo-gio-da-lat-1-hop-500gr/" target="_blank">Hồng Treo Gió</a></h2>
+            <p><del>150.000đ</del></p>
+            <p>100.000đ /1kg</p>
+            <button>MUA</button>
+        </div>
+
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2023/04/z4241791201799_0842ab1b2bc3b097eb0f2ffb14ee36a3.jpg" >
+            <h2><a style="text-decoration: none;" href="https://traicayngon.com.vn/san-pham/quyt-uc-2ph-ngot-lim/" target="_blank">Quýt Úc</a></h2>
+            <p><del>155.000đ</del></p>
+            <p>120.00đ / 1kg</p>
+              <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://dautaydalat.vn/wp-content/uploads/2020/02/dau-tay-nhat-da-lat-1-600x600.jpg" >
+            <h2><a style="text-decoration: none;" href="https://dautaydalat.vn/san-pham/dau-tay-nhat-ban/"target="_blank">Dâu Tây Đà Lạt</a></h2>
+            <p><del>249.000đ</del></p>
+            <p>200.000đ / 1kg</p>
+            <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2022/07/c7e0b3d82cd5ef8bb6c45-340x340.jpg" >
+            <h2><a style="text-decoration: none;" href="https://vuadualuoi.net/dua-luoi-ha-uyen/"target="_blank">Dưa lưới Đài Loan </a></h2>
+            <p><del>200.000đ</del></p>
+            <p>150.000đ / 1kg</p>
+            <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2022/07/Lazzara-grapes-blog-post-march-1-340x340.jpg" >
+            <h2><a style="text-decoration: none;" href="https://traicayngon.com.vn/san-pham/nho-do-khong-hat-uc-crimson/"target="_blank">Nho Đỏ Không Hạt Úc</a></h2>
+            <p><del>280.000đ</del></p>
+            <p>220.00đ / 1kg</p>
+            <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2017/01/15726362_1229310277159715_8946748205281385625_n-340x340.jpg" >
+            <h2><a style="text-decoration: none;" href="https://traicayngon.com.vn/san-pham/tao-envy-new-zealand-size-nho/"target="_blank">Táo Envy New Zealand </a></h2>
+            <p><del>288.000đ</del></p>
+            <p>202.000đ / 1kg</p>
+            <button>MUA</button>
+        </div>
+        <div class="qua">
+            <img src="https://annamshop.com/wp-content/uploads/2019/08/buoi-da-xanh-loai-1-768x768.jpg" >
+            <h2><a style="text-decoration: none;" href="https://annamshop.com/buoi-da-xanh/"target="_blank">Bưởi Da Xanh</a></h2>
+            <p><del>180.000đ</del></p>
+            <p>120.000đ / 1kg</p>
+            <button>MUA</button>
+        </div> 
+        <div class="qua">
+            <img src="https://traicayngon.com.vn/wp-content/uploads/2017/01/16114190_10153987037751222_5319345083283936321_n-340x340.jpg" >
+            <h2><a style="text-decoration: none;" href="https://traicayngon.com.vn/san-pham/nho-kho-nguyen-canh-uc-crimson-seedless/" target="_blank">Nho Khô</a> </h2>
+            <p><del>499.000đ</del></p>  <s>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </s>
+            <p>399.000đ / 1kg</p>
+            <button>MUA</button>
+        </div>       
+        <div class="qua">
+            <img src="https://i.pinimg.com/564x/d3/bb/e4/d3bbe4f77d8b0ce77b13abcdee0a1c91.jpg" >
+            <h2><a style="text-decoration: none;" href="https://nongsandungha.com/thuc-pham/coc-bao-tu" target="_blank">Cóc </a> </h2>
+            <p><del>120.000đ</del></p>  <s>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </s>
+            <p>99.00đ / 1kg</p>
+            <button>MUA</button>
+        </div>       
+</body>
+</html>
